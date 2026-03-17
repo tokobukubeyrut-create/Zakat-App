@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import { useState } from 'react';
 import { 
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
   BarChart, Bar, Cell
@@ -176,7 +176,7 @@ const App = () => {
               
               <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
                 <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-6 text-center">Efek Pengganda Konsumsi</h3>
-                <div style={{ width: "100%", height: 250 }}>
+                <div className="h-56">
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={consumptionData}>
                       <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f8fafc" />
@@ -198,7 +198,7 @@ const App = () => {
 
               <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
                 <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-6 text-center">Distribusi per Kelompok</h3>
-                <div style={{ width: "100%", height: 250 }}>
+                <div className="h-56">
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={distributionData} layout="vertical" margin={{ left: 20 }}>
                       <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#f8fafc" />
